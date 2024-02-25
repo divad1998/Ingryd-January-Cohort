@@ -6,6 +6,7 @@ public class Exercise {
         //printEvenNumbersFrom2To30();
         //printHelloWorldFiveTimes();
         //print1To25();
+        sumAfter5Counts(2, 3);
     }
 
     /**
@@ -52,18 +53,33 @@ public class Exercise {
         }
     }
 
-    private static void sumAfter5Counts() {
-        int number = 1;
-        int count = 1;
-        int[] array = new int[4];
+    /**
+     * Increments the starting number by the incrementer per-loop and prints the sum after every five loops. Loops 20 times.
+     * @param startingNum
+     * @param incrementer
+     */
+    private static void sumAfter5Counts(int startingNum, int incrementer) {
+        int loopCount = 1;
+        int iterationCount = 1;
+        int[] sumArray = new int[4];
         int arrayIndex = 0;
+
         do {
-            if (count == 5) {
-                array[arrayIndex] =
+            startingNum += incrementer;
+            if (iterationCount == 5) {
+                    sumArray[arrayIndex] = startingNum;
+                    arrayIndex++;
+                    iterationCount = 0;
             }
-            number++;
+            iterationCount++;
+            loopCount++;
+        }while(loopCount <= 20);
 
-
-        }
+        System.out.println("Series 1 total: " + sumArray[0]);
+        System.out.println("Series 2 total: " + sumArray[1]);
+        System.out.println("Series 3 total: " + sumArray[2]);
+        System.out.println("Series 4 total: " + sumArray[3]);
+        int sumTotal = sumArray[0] + sumArray[1] + sumArray[2] + sumArray[3];
+        System.out.println("Total Summation: " + sumTotal);
     }
 }
