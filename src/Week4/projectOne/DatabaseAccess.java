@@ -1,9 +1,4 @@
-package Week4.project;
-
-import java.sql.Connection;
-import java.sql.SQLException;
-import java.sql.Statement;
-import java.util.Stack;
+package Week4.projectOne;
 
 public interface DatabaseAccess {
     /**

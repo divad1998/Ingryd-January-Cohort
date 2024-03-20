@@ -1,4 +1,4 @@
-package Week4.project;
+package Week4.projectOne;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
